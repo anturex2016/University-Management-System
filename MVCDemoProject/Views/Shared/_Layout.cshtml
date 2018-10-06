@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title @*- My ASP.NET Application*@</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("stylesheet", required: false)
+    <style>
+        .dropbtn {
+            background-color: #808080;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #A9A9A9;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("HOME", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                
+                @*<ul >*@
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+
+
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Department</button>
+                        <div class="dropdown-content">
+                                 <ul>
+                                <li>@Html.ActionLink("Save Dept.", "SaveDepartment", "Department")</li>
+                                <li>@Html.ActionLink("ALL Dept.", "ShowAllDepartment", "Department")</li>
+                                </ul>
+                            
+                         
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Course</button>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>@Html.ActionLink("saveCouse", "SaveCourse", "Course")</li>
+                                <li>@Html.ActionLink("Couse Statistic", "CourseStatistic", "Course")</li>
+                                <li>@Html.ActionLink("Unassign Courses", "Unassign", "Teacher")</li>
+                            </ul>
+                         
+                        </div>
+                    </div>
+              
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Teacher</button>
+                        <div class="dropdown-content">
+                            <ul>
+                                @*<li>@Html.ActionLink("saveCouse", "SaveCourse", "Course")</li>
+                               <li>@Html.ActionLink("Couse Info", "CourseStatistic", "Course")</li>*@
+                                <li>@Html.ActionLink("Save Teacher", "SaveTeacher", "Teacher")</li>
+                                <li>@Html.ActionLink("Assign Teacher", "Assign", "Teacher")</li>
+                               
+                              
+                            </ul>
+                         
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Student</button>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>@Html.ActionLink("Save Student.", "SaveStudent", "Student")</li>
+                                <li>@Html.ActionLink("Enroll Course", "Enroll", "Student")</li>
+                                <li>@Html.ActionLink("Save Result", "SaveStudentResult", "Student")</li>
+                                <li>@Html.ActionLink("View Result", "ViewStudentResult", "Student")</li>
+
+                            </ul>
+                         
+
+
+
+                        </div>
+                    </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Room Allocation</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>@Html.ActionLink("Allocate Room", "AllocateRoom", "RoomAllocation")</li>
+
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
+
+                @*</ul>*@
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        @*<hr />*@
+        <footer>
+            @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

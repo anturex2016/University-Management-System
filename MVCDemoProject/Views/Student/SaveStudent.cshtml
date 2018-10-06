@@ -1,0 +1,154 @@
+﻿@using System.Collections.Specialized
+@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "SaveStudent";
+    List<Department> departmentList = ViewBag.Departments;
+    Student student = ViewBag.LastStudent;
+}
+<h2>SaveStudent</h2>
+<form method="POST" id="SaveStudent">
+    <table>
+        <tr>
+            <td><label for="StudentName">Name</label></td>
+            <td><input type="text" id="StudentName" name="StudentName"/></td>
+        </tr>
+        <tr>
+            <td><label for="StudentEmail">Email</label></td>
+            <td><input type="text" id="StudentEmail" name="StudentEmail"/></td>
+        </tr>
+        <tr>
+            <td><label for="StudentContactNo">Contact No.</label></td>
+            <td><input type="text" id="StudentContactNo" name="StudentContactNo"/></td>
+        </tr>
+        <tr>
+            <td><label for="RegistrationDate">Date</label></td>
+            <td><input type="text" id="RegistrationDate" name="RegistrationDate"/></td>
+        </tr>
+        <tr>
+            <td><label for="StudentAddress">Address</label></td>
+            <td><textarea id="StudentAddress" name="StudentAddress" rows="7" cols="21"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td>
+                <select id="DepartmentID" name="DepartmentID">
+                    <option value="">Select</option>
+                    @foreach (Department department in departmentList)
+                    {
+                        <option value="@department.DepartmentID">@department.DepartmentName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Register"/></td>
+        </tr>
+    </table>
+ 
+</form>
+@if (ViewBag.Message == null)
+{
+    <p>@*Email must be unique*@</p>
+}
+else if (@ViewBag.Message == "Email must be unique ")
+{
+  <p>Email must be unique.</p>
+}
+else
+{
+  
+   <h3>@ViewBag.Message</h3> 
+    <br/>
+    
+    <table>
+        <tr>
+            <td><label >Student Name: @student.StudentName</label></td>
+            
+        </tr>
+        <tr>
+            <td><label>Student Email: @student.StudentEmail</label></td>
+           
+        </tr>
+        <tr>
+            <td><label >Contact No. @student.StudentContactNo</label></td>
+           
+        </tr>
+        <tr>
+            <td><label >Registration Date: @student.RegistrationDate.Date.ToString("D")</label></td>
+            
+        </tr>
+        <tr>
+            <td><label >Student Address: @student.StudentAddress</label></td>
+
+        </tr>
+        <tr>
+            <td><label >Registration Number: @student.RegistrationNumber </label></td>
+
+        </tr>
+        </table>  
+}
+
+           
+
+            @section scripts{
+                <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+                <script src="~/Scripts/jquery-1.12.4.js"></script>
+                <script src="~/Scripts/jquery.validate.js"></script>
+                <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+
+
+                <script>
+                    $(document).ready(function () {
+                        $("#RegistrationDate").datepicker();
+
+                        $("#SaveStudent").validate({
+                            rules:
+                            {
+                                StudentName: "required",
+                                StudentEmail:
+                                {
+                                    required: true,
+                                    email: true
+                                },
+                                RegistrationDate: "required",
+                                StudentAddress: "required",
+                                DepartmentID: "required"
+
+                            },
+                            message:
+                            {
+                                StudentName: "Please enter your name",
+                                StudentEmail:
+                                {
+                                    required: "Enter Email",
+                                    email: "Enter valid email"
+                                },
+                                RegistrationDate: "Select Date",
+                                StudentAddress: "Enter Address",
+                                DepartmentID: "Select Department"
+
+
+                            }
+
+
+
+
+                        });
+
+
+                        //$('#SaveStudent').click(function() {
+                        //    alert("Ajaira");
+                        //});
+
+                    })
+                </script>
+            }
+
+
+
+
+

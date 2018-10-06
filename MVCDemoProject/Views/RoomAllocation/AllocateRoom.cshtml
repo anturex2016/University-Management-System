@@ -1,0 +1,176 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "AllocateRoom";
+    List<Department> departmentList = ViewBag.Departments;
+    List<Course> courseList = ViewBag.Courses;
+    List<Room> roomList = ViewBag.Rooms;
+    List<Day> dayList = ViewBag.Days;
+}
+@section stylesheet
+{
+<link href="~/Content/jquery.timepicker.css" rel="stylesheet" />
+    @*<link href="~/Content/jquery.timepicker.css" rel="stylesheet" />*@
+<link href="~/Content/clockface.css" rel="stylesheet" />
+}
+<h2>Allocate Rooms</h2>
+
+<form method="POST" id="SaveRoom">
+    <table>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td>
+                <select id="DepartmentID" name="DepartmentID">
+                    <option value="">-Select Department-</option>
+                    @foreach (Department department in departmentList)
+                    {
+                        <option value="@department.DepartmentID">@department.DepartmentName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="CourseID">Course</label></td>
+            <td>
+                <select id="CourseID" name="CourseID">
+                    <option value="">-Select Course-</option>
+                    @*@foreach (Course aCourses in courseList)
+                        {
+                            <option value="@aCourses.CourseID">@aCourses.CourseName</option>
+                        }*@
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="RoomId">Room No.</label></td>
+            <td>
+                <select id="RoomId" name="RoomId">
+                    <option value="">-Select Room-</option>
+                    @foreach (Room room in roomList)
+                    {
+                        <option value="@room.RoomId">@room.RoomNo</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="DayId">Day</label></td>
+            <td>
+                <select id="DayId" name="DayId">
+                    <option value="">-Select Day-</option>
+                    @foreach (Day days in dayList)
+                    {
+                        <option value="@days.DayId">@days.DayName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="FromTime">From</label></td>
+            <td><input type="text" id="FromTime" value="0:00 AM" data-format="hh:mm A" class="input-small" name="FromTime"></td>
+        </tr>
+        <tr>
+            <td><label for="ToTime">To</label></td>
+            <td><input type="text" id="ToTime" value="0:00 AM" data-format="hh:mm A" class="input-small" name="ToTime"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Allocate" /></td>
+        </tr>
+    </table>
+
+</form>
+@ViewBag.SaveRooms
+
+@section scripts{
+<script src="~/Scripts/jquery-1.12.4.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+
+    <script src="~/Scripts/clockface.js"></script>
+    <script src="~/Scripts/jquery.timepicker.js"></script>
+
+    @*<script src="~/Scripts/jquery.timepicker.min.js"></script>*@
+
+    <script>
+        $(document).ready(function() {
+            $('#FromTime').clockface();
+            $('#ToTime').clockface();
+
+
+            $("#DepartmentID").change(function () {
+                var deptId = $("#DepartmentID").val();
+                $("#CourseID").empty();
+
+                var json = { departmentId: deptId };
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetCourseByDepartmentId", "RoomAllocation")',
+                    //url: '/Department/GetStudentsByDepartmentId',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function (result) {
+                        //alert(result);
+                        //$("#myTable").show();
+                        $('#CourseID').append('<option value="">--Select Course--</option>');
+                        $.each(result, function (key, value) {
+                            $('#CourseID').append('<option value="' + value.CourseID + '">' + value.CourseCode + '</option>');
+
+
+                        });
+
+                    }
+                });
+
+
+
+
+            });
+
+
+
+
+
+            $("#SaveRoom").validate({
+                rules: {
+
+
+                    DepartmentID: "required",
+                    CourseID: "required",
+
+                    RoomId: "required",
+                    DayId: "required",
+                    FromTime: "required",
+                    ToTime: "required"
+
+                },
+                messages: {
+
+
+                    DepartmentID: "Please Select Department",
+                    CourseID: "Please Select Course",
+                    RoomId: "Please Select Room",
+                    DayId: "Please Select Day",
+                    FromTime: "Please Select Time",
+                    ToTime: "Please Select Time"
+
+
+                }
+
+
+
+            });
+
+
+
+
+
+
+
+        });
+    </script>
+
+
+}

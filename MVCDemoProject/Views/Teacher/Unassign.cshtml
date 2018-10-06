@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Unassign";
+}
+
+<h2>Unassign</h2>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <form method="POST">
+            <input name="submit" type="submit" value="Unassign Courses" class="btn-danger "data-confirm=" are you sure to unassign all courses?"/>
+        </form>
+        @ViewBag.Message
+
+    </div>
+</div>
+
+@section scripts
+{
+<script src="~/Scripts/jquery-1.12.4.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        jQuery('[data-confirm]').click(function (e) {
+            if (!confirm(jQuery(this).attr("data-confirm"))) {
+                e.preventDefault();
+            }
+        });
+    });
+</script>
+}
+
+
+

@@ -1,0 +1,153 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "Enroll";
+}
+
+<h2>Enroll In a Course</h2>
+<form method="POST" id="SaveForm">
+    <table>
+        <tr>
+            <td>
+                <label for="StudentId">Student Reg. No.</label>
+            </td>
+            <td>
+                <select name="StudentId" id="StudentId">
+                    <option value="">--Select Reg.No--</option>
+                    @foreach (Student student in ViewBag.Students)
+                    {
+                        <option value="@student.StudentId">@student.RegistrationNumber</option>
+                    }
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="StudentName">Name</label></td>
+            <td><input type="text" id="StudentName" name="StudentName"/></td>
+        </tr>
+        <tr>
+            <td><label for="StudentEmail">Email</label></td>
+            <td><input type="text" id="StudentEmail" name="StudentEmail"/></td>
+        </tr>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td><input type="text" id="DepartmentID" name="DepartmentID"/></td>
+        </tr>
+
+        <tr>
+            <td><label for="CourseId">Course</label></td>
+            <td>
+                <select name="CourseId" id="CourseId">
+                    <option value="">--Select Course--</option>
+                    
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="EnrollDate">Date</label></td>
+            <td><input type="text" id="EnrollDate" name="EnrollDate"/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" class="btn btn-default"/></td>
+        </tr>
+    </table>
+
+</form>
+@ViewBag.EnrollmentMessage
+
+@section scripts
+{
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            $("#StudentId").change(function() {
+                var studentId = $("#StudentId").val();
+                $('#CourseId').empty();
+                var json = { studentId: studentId };
+
+                //alert(value.DepartmentID);
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetStudentByStudentId", "Student")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    dataType: "json",
+                    success: function(data) {
+                        $.each(data, function(key, value) {
+                            //alert(value.TeacherCredit);
+                            $('#StudentName').val(value.StudentName);
+                            $('#StudentEmail').val(value.StudentEmail);
+                            $('#DepartmentID').val(value.DepartmentName);
+                            //alert(value.DepartmentID);
+
+                        });
+                    }
+                });
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetCourseByStudentId", "Student")',
+                    //url: '/Department/GetStudentsByDepartmentId',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function(result) {
+
+                        $('#CourseId').append('<option value="">--Select Course--</option>');
+                        $.each(result, function(key, value) {
+
+                           
+                            $('#CourseId').append('<option value="' + value.CourseID + '">' + value.CourseName + '</option>');
+                            
+                        });
+
+                    }
+                });
+
+
+            });
+
+
+            $("#EnrollDate").datepicker();
+
+
+
+            $("#SaveForm").validate({
+                rules: {
+                    StudentId: "required",
+                    CourseId: "required",
+                    EnrollDate: "required"
+                },
+                messages: {
+                    StudentId: "Select Student Reg.No",
+                    CourseId: "Select Course",
+                    EnrollDate: "Select Date"
+
+                }
+
+
+
+            });
+
+        
+
+
+        });
+
+
+    </script>
+}

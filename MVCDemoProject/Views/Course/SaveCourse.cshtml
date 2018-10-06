@@ -1,0 +1,113 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "SaveCourse";
+      List<Department> departmentList = ViewBag.Departments;
+    List<Semester> semesterList = ViewBag.Semesters;
+}
+
+
+<h2>SaveCourse</h2>
+
+<form method="POST" id="SaveCourse">
+    <table>
+        <tr>
+            <td><label for="CourseCode">Code</label></td>
+            <td><input type="text" id="CourseCode" name="CourseCode" /></td>
+        </tr>
+        <tr>
+            <td><label for="CourseName">Name</label></td>
+            <td><input type="text" id="CourseName" name="CourseName" /></td>
+        </tr>
+        <tr>
+            <td><label for="CourseCredit">Credit</label></td>
+            <td><input type="text" id="CourseCredit" name="CourseCredit" /></td>
+        </tr>
+        <tr>
+            <td><label for="CourseDescription">Description</label></td>
+            <td><textarea id="CourseDescription" name="CourseDescription" rows="7" cols="21"> </textarea></td>
+        </tr>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td>
+                <select id="DepartmentID" name="DepartmentID">
+                    <option value="">Select</option>
+                    @foreach (Department department in departmentList)
+                    {
+                        <option value="@department.DepartmentID">@department.DepartmentName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="SemesterID">Semester</label></td>
+            <td>
+                <select id="SemesterID" name="SemesterID">
+                    <option value="">Select</option>
+                    @foreach (Semester semester in semesterList)
+                    {
+                        <option value="@semester.SemesterID">@semester.SemesterName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+</form>
+@ViewBag.Message
+
+@section scripts
+{
+<script src="~/Scripts/jquery-1.12.4.js"></script>
+  
+<script src="~/Scripts/jquery.validate.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        $("#SaveCourse").validate({
+            rules: {
+                CourseCode: {
+                    required: true,
+                    minlength: 5
+                },
+                CourseName: "required",
+                CourseCredit: {
+                    required: true,
+                    range: [.5, 5]
+
+                },
+                CourseDescription: "required",
+                DepartmentID: "required",
+                SemesterID: "required"
+            },
+            messages: {
+                CourseCode: {
+                    required: "Please enter Course Code",
+                    minlength: "Course Code must be 5 charachter long"
+                },
+
+                CourseName: "Please enter Course Name",
+                CourseCredit: {
+                    required: "Please enter Course Credit",
+                    range: "Course Credit range must be 0.5 to 5.0"
+
+                },
+                CourseDescription: "Enter course description",
+                DepartmentID: "Please Select Department",
+
+                SemesterID: "Please Select Semester"
+            }
+
+
+
+        });
+
+
+    });
+</script>
+
+}

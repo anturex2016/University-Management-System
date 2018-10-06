@@ -1,0 +1,28 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "ShowAllDepartment";
+}
+
+<h2>All Departments</h2>
+
+<table class="table-bordered">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (Department department in Model)
+    {
+        <tr>
+            <td>@department.DepartmentCode</td>
+            <td>@department.DepartmentName</td>
+
+        </tr>
+    }
+    </tbody>
+</table>
+

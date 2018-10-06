@@ -1,0 +1,92 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "ViewClassScheduleAndRoomAllocation";
+    List<Department> departmentList = ViewBag.Departments;
+        
+}
+
+<h2>View Class Schedule And Room Allocation  </h2>
+<form method="POST">
+
+    <table>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td>
+                <select id="DepartmentID" name="DepartmentID">
+                    <option value="">Select</option>
+                    @foreach (Department department in departmentList)
+                    {
+                        <option value="@department.DepartmentID">@department.DepartmentName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+    </table>
+    <table class="table-bordered" id="statistic">
+        <thead>
+
+            <tr>
+                <th>Course Code</th>
+                <th> Course Name</th>
+                <th> Schedule Info</th>
+               
+
+
+            </tr>
+        </thead>
+        <tbody id="allocationStatistic"> </tbody>
+    </table>
+</form>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $("#DepartmentID").change(function () {
+                var deptId = $("#DepartmentID").val();
+                $('#allocationStatistic').empty();
+                var json = { DepartmentID: deptId };
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ClassScheduleByDepartmentId", "RoomAllocation")',
+                    //url: '/Department/GetStudentsByDepartmentId',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function (result) {
+
+                        //alert(result);
+                        //$("#myTable").show();
+                        $.each(result, function (key, value) {
+
+
+                            //alert(value.TeacherName);
+
+
+                            $('#allocationStatistic').append('<tr><td>' + value.CourseCode + '</td><td>' + value.CourseName + '</td><td>' + value.ScheduleInfo + '</td></tr>');
+
+
+
+
+                            //$('#courseStatistic').append('<tr><td>' + value.CourseCode + '</td><td>' + value.CourseName + '</td><td>' + value.SemesterName + '</td><td>Not assigned</td></tr>');
+
+                            //$('#courseStatistic').append('<tr><td>' + value.CourseCode + '</td><td>' + value.CourseName + '</td><td>' + value.SemesterName + '</td><td>'+value.TeacherName+'</td></tr>');
+
+                        });
+
+                    }
+
+                });
+
+
+            });
+
+
+        });
+
+    </script>
+     
+}
+

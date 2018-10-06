@@ -1,0 +1,118 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "SaveTeacher";
+    List<Designation> designationList = ViewBag.Designations;
+    List<Department> departmentList = ViewBag.Departments;
+}
+
+<h2>Save Teacher</h2>
+<form method="POST" id="SaveTeacher">
+    <table>
+        <tr>
+            <td><label for="TeacherName">Name</label></td>
+            <td><input type="text" id="TeacherName" name="TeacherName" /></td>
+        </tr>
+        <tr>
+            <td><label for="TeacherAddress">Address</label></td>
+            <td><textarea id="TeacherAddress" name="TeacherAddress" rows="7" cols="21"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="TeacherEmail">Email</label></td>
+            <td><input type="text" id="TeacherEmail" name="TeacherEmail" /></td>
+        </tr>
+        <tr>
+            <td><label for="TeacherContactNo">Contact No</label></td>
+            <td><input type="text" id="TeacherContactNo" name="TeacherContactNo" /></td>
+        </tr>
+        <tr>
+            <td><label for="DesignationID">Designation</label></td>
+            <td>
+                <select id="DesignationID" name="DesignationID">
+                    <option value="">Select</option>
+                    @foreach (Designation designation in designationList)
+                    {
+                        <option value="@designation.DesignationID">@designation.DesignationName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td>
+                <select id="DepartmentID" name="DepartmentID">
+                    <option value="">Select</option>
+                    @foreach (Department department in departmentList)
+                    {
+                        <option value="@department.DepartmentID">@department.DepartmentName</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="TeacherCredit">Credit to be taken </label></td>
+            <td><input type="text" id="TeacherCredit" name="TeacherCredit" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+</form>
+@ViewBag.Message
+@section scripts
+{
+<script src="~/Scripts/jquery-1.12.4.js"></script>
+   
+<script src="~/Scripts/jquery.validate.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#SaveTeacher").validate({
+            rules: {
+                TeacherName: "required",
+                TeacherAddress: "required",
+                TeacherEmail: {
+                    required: true,
+                    email: true
+                },
+                TeacherContactNo: "required",
+                DesignationID: "required",
+                DepartmentID: "required",
+
+                TeacherCredit: {
+                    required: true,
+                    number: true,
+                    min: 0
+
+                }
+            },
+            messages: {
+                TeacherName: "Please enter name",
+                TeacherAddress: "Please enter address",
+                CourseEmail: {
+                    required: "Please enter email",
+                    email: "Please enter valid email"
+                },
+
+                TeacherContactNo: "Enter Contact No",
+                DesignationID: "Please Select Designation",
+                DepartmentID: "Please Select Department",
+                TeacherCredit: {
+                    required: "Please enter Course Credit",
+                    number: "Please enter a number",
+                    minlength: " Credit range must be No negetive value"
+
+                }
+            }
+
+
+
+        });
+    });
+
+
+</script>
+
+}
+

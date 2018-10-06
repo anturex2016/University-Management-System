@@ -1,0 +1,123 @@
+﻿@using MVCDemoProject.Models
+
+@{
+    ViewBag.Title = "ViewStudentResult";
+}
+
+<h2>ViewStudentResult</h2>
+
+
+<form method="POST">
+    <table>
+        <tr>
+            <td>
+                <label for="StudentId">Student Reg. No.</label>
+            </td>
+            <td>
+                <select name="StudentId" id="StudentId">
+                    <option value="">--Select Reg.No--</option>
+                    @foreach (Student student in ViewBag.Students)
+                    {
+                        <option value="@student.StudentId">@student.RegistrationNumber</option>
+                    }
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="StudentName">Name</label></td>
+            <td><input type="text" id="StudentName" name="StudentName"/></td>
+        </tr>
+        <tr>
+            <td><label for="StudentEmail">Email</label></td>
+            <td><input type="text" id="StudentEmail" name="StudentEmail"/></td>
+        </tr>
+        <tr>
+            <td><label for="DepartmentID">Department</label></td>
+            <td><input type="text" id="DepartmentID" name="DepartmentID"/></td>
+        </tr>
+
+    </table>
+    <table class="table-bordered" id="resultView">
+        <thead>
+
+            <tr>
+                <th>Course Code</th>
+                <th> Course Name</th>
+                <th> Grade</th>
+              
+            </tr>
+        </thead>
+        <tbody id="ViewStatistic"> </tbody>
+    </table>
+</form>
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            $("#StudentId").change(function () {
+
+                var studentId = $("#StudentId").val();
+                $('#ViewStatistic').empty();
+                var json = { studentId: studentId };
+
+                //alert(value.DepartmentID);
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetStudentByStudentId", "Student")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    dataType: "json",
+                    success: function (data) {
+                        $.each(data, function (key, value) {
+                            //alert(value.TeacherCredit);
+                            $('#StudentName').val(value.StudentName);
+                            $('#StudentEmail').val(value.StudentEmail);
+                            $('#DepartmentID').val(value.DepartmentName);
+                            //alert(value.DepartmentID);
+
+                        });
+                    }
+                });
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetResultByStudentId", "Student")',
+                    //url: '/Department/GetStudentsByDepartmentId',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function (result) {
+
+                        //alert(result);
+                        //$("#myTable").show();
+                        $.each(result, function (key, value) {
+
+
+                            alert(value.LetterGrade);
+
+
+                            $('#ViewStatistic').append('<tr><td>' + value.CourseCode + '</td><td>' + value.CourseName + '</td><td>' + value.LetterGrade + '</td></tr>');
+
+
+
+
+                            //$('#courseStatistic').append('<tr><td>' + value.CourseCode + '</td><td>' + value.CourseName + '</td><td>' + value.SemesterName + '</td><td>Not assigned</td></tr>');
+
+                            //$('#courseStatistic').append('<tr><td>' + value.CourseCode + '</td><td>' + value.CourseName + '</td><td>' + value.SemesterName + '</td><td>'+value.TeacherName+'</td></tr>');
+
+                        });
+
+                    }
+
+                });
+
+
+
+
+
+            });
+        });
+    </script>
+}

@@ -1,0 +1,139 @@
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.csprojResolveAssemblyReference.cache
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.dll.config
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.pdb
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Antlr3.Runtime.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\EntityFramework.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\EntityFramework.SqlServer.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Google.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Web.Infrastructure.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Newtonsoft.Json.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Owin.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Helpers.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Mvc.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Optimization.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Razor.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Deployment.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Razor.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\WebGrease.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Helpers.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Mvc.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Optimization.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.Razor.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Deployment.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Razor.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Newtonsoft.Json.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Antlr3.Runtime.pdb
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\EntityFramework.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\EntityFramework.SqlServer.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Google.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.dll
+D:\Avb_project\W_projectWork\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.pdb
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.dll.config
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.pdb
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Antlr3.Runtime.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\EntityFramework.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\EntityFramework.SqlServer.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Core.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Cookies.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Facebook.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Google.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.OAuth.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Twitter.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Web.Infrastructure.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Newtonsoft.Json.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Owin.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Helpers.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Mvc.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Optimization.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Razor.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Deployment.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Razor.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\WebGrease.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Helpers.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Mvc.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Optimization.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Razor.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Deployment.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Razor.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Newtonsoft.Json.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Antlr3.Runtime.pdb
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\EntityFramework.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\EntityFramework.SqlServer.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Core.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Facebook.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Cookies.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.OAuth.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Google.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Twitter.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.csprojResolveAssemblyReference.cache
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.dll
+E:\MOVIE\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.pdb
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.dll.config
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.dll
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\MVCDemoProject.pdb
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Helpers.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Mvc.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Optimization.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.Razor.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Newtonsoft.Json.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Antlr3.Runtime.pdb
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\EntityFramework.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.csprojResolveAssemblyReference.cache
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.dll
+C:\Users\Antu Rex\Downloads\Finalprojectlast\Finalproject\Finalproject\MVCDemoProject\MVCDemoProject\obj\Debug\MVCDemoProject.pdb
